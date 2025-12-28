@@ -4,29 +4,32 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/impostor/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['vite.svg'],
+      includeAssets: ['vite.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
+        id: '/impostor/',
         name: 'Impostor - Juego de Mesa',
         short_name: 'Impostor',
         description: 'Juego Impostor - Juega con tus amigos y encuentra al impostor',
+        scope: '.',
         theme_color: '#1e1e2e',
         background_color: '#1e1e2e',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        start_url: '.',
         icons: [
           {
-            src: '/icon-192.png',
+            src: '/impostor/icon-192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/icon-512.png',
+            src: '/impostor/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
