@@ -1,0 +1,205 @@
+.game-results {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.results-header {
+  margin-bottom: 3rem;
+}
+
+.winner-badge {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  border: 3px solid;
+  animation: reveal 0.5s ease-out;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.winner-badge.crewmate {
+  background: rgba(76, 175, 80, 0.15);
+  border-color: #4caf50;
+}
+
+.winner-badge.impostor {
+  background: rgba(244, 67, 54, 0.15);
+  border-color: #f44336;
+}
+
+.winner-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.winner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.1em;
+}
+
+.winner-badge.crewmate .winner-title {
+  color: #4caf50;
+}
+
+.winner-badge.impostor .winner-title {
+  color: #f44336;
+}
+
+.winner-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.roles-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.role-group {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.role-group-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid;
+}
+
+.role-group-title.impostor {
+  color: #f44336;
+  border-color: rgba(244, 67, 54, 0.3);
+}
+
+.role-group-title.crewmate {
+  color: #4caf50;
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-player {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.player-icon {
+  font-size: 1.5rem;
+}
+
+.player-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.player-status {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.player-status.alive {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.player-status.dead {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.new-game-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.new-game-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.new-game-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .game-results {
+    padding: 1.5rem 1rem;
+  }
+
+  .winner-badge {
+    padding: 2rem 1.5rem;
+  }
+
+  .winner-icon {
+    font-size: 4rem;
+  }
+
+  .winner-title {
+    font-size: 2rem;
+  }
+
+  .role-group {
+    padding: 1.25rem;
+  }
+}
+

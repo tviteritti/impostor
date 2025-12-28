@@ -1,0 +1,22 @@
+INSTRUCCIONES PARA CREAR LOS ICONOS:
+
+1. Necesitas crear dos archivos PNG:
+   - icon-192.png (192x192 píxeles)
+   - icon-512.png (512x512 píxeles)
+
+2. Puedes usar:
+   - Un emoji 🎭 en un fondo de color
+   - Un logo personalizado
+   - Una imagen cuadrada
+
+3. Herramientas recomendadas:
+   - https://realfavicongenerator.net/
+   - https://www.pwabuilder.com/imageGenerator
+   - Cualquier editor de imágenes (Photoshop, GIMP, Canva, etc.)
+
+4. Coloca los archivos en esta carpeta (public/) con los nombres exactos:
+   - icon-192.png
+   - icon-512.png
+
+5. Los iconos deben ser cuadrados y preferiblemente con fondo sólido o transparente.
+
